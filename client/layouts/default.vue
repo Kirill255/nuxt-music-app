@@ -1,10 +1,23 @@
 <template>
   <div>
+    <Navbar />
     <nuxt />
   </div>
 </template>
 
+<script>
+// import Navbar from '~/components/Navbar/Navbar.vue'
+import Navbar from '@/components/Navbar/Navbar.vue'
+
+export default {
+  components: {
+    Navbar
+  }
+}
+</script>
+
 <style>
+/*
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -52,4 +65,5 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+*/
 </style>
