@@ -13,3 +13,7 @@ netstat -ano | findstr :3001
 
 tskill 12768 # нам нужен именно этот процесс, т.к. 0.0.0.0:3001 -> localhost:3001, или taskkill 12768
 ```
+
+## addNewMusic
+
+![126](https://user-images.githubusercontent.com/24504648/75629598-5dad2e80-5bf4-11ea-8b26-82fa8512796a.png)
