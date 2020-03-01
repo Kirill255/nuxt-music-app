@@ -1,10 +1,12 @@
 import express from "express";
+// import path from "path";
 import logger from "morgan";
 import mongoose from "mongoose";
 import cors from "cors";
 
 import dbConfig from "./config/db";
 import commonConfig from "./config/common";
+import musicRoutes from "./routes/music";
 
 const app = express();
 const PORT = commonConfig.PORT;
@@ -58,9 +60,12 @@ app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
 
 app.use("/uploads", express.static("uploads"));
+// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/", (req, res) => {
   res.json("Hello world");
 });
+
+app.use("/api/music", musicRoutes);
 
 app.listen(PORT, () => console.log(`App is running on ${PORT} -> http://localhost:${PORT}`)); // eslint-disable-line no-console

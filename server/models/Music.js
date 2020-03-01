@@ -5,12 +5,12 @@ const musicSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  music: {
-    type: Object,
-    required: true
-  },
   artist: {
     type: String,
+    required: true
+  },
+  music: {
+    type: Object,
     required: true
   },
   created: {
